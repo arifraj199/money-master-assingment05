@@ -17,7 +17,7 @@
 
     <!-- header section -->
     <header class="d-flex align-items-center justify-content-center mt-5 text-center">
-        <h1 class="text-center">Money <span class="text-primary">HUB</span></h1>
+        <h1 class="text-center fw-bold">Money <span class="text-success">HUB</span></h1>
         <img class="" src="images/money-icon.png" alt="" width="75" height="65">
     </header>
     <!-- main section -->
@@ -34,23 +34,23 @@
                         <!-- total income -->
                         <div>
                             <h4 class="mb-3">Income</h4>
-                            <span class="fw-bold">Income: </span><input class="w-50 border-0 py-2 input-bg rounded" type="text" value="">
+                            <span class="fw-bold">Income: </span><input id="income-cost" class="w-50 border-0 py-2 input-bg rounded" type="text" value="20000">
                         </div>
                         <!-- expenses -->
                         <div>
                             <h4 class="mt-4 mb-3">Expenses</h4>
-                            <span class="fw-bold">Food: </span><input class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value="">
-                            <br><span class="fw-bold">Rent: </span><input class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value="">
-                            <br><span class="fw-bold">Clothes: </span><input class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value=""><br>
+                            <span class="fw-bold">Food: </span><input id="food-cost" class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value="">
+                            <br><span class="fw-bold">Rent: </span><input id="rent-cost" class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value="">
+                            <br><span class="fw-bold">Clothes: </span><input id="clothes-cost" class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value=""><br>
                         </div>
                         <!-- calculate button -->
                         <div class="mb-5 mt-3">
-                            <button class="bg-primary bg-opacity-75 text-white border-0 fs-5 px-5 py-2 rounded-3 ">Calculate</button>
+                            <button id="calculate-button" class="bg-primary bg-opacity-75 text-white border-0 fs-5 px-5 py-2 rounded-3 ">Calculate</button>
                         </div>
                         <!-- total balance count -->
                         <div>
-                            <h4 class="my-4">Total Expenses:<span>0</span></h4>
-                            <h4 class="my-4">balance:<span>0</span></h4>
+                            <h4 class="my-4">Total Expenses:<span id="expenses-total">0</span></h4>
+                            <h4 class="my-4">Balance:<span id="balance-total">20000</span></h4>
                         </div>
                         <!-- saving balance -->
                         <div>
