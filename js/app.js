@@ -25,11 +25,41 @@ function updateTotalBalance(property) {
     const expenseTotalBalance = expensesBalance('expenses');
     const updateCost = parseFloat(balanceTotal) - parseFloat(expenseTotalBalance);
     balanceInput.innerText = updateCost;
+
 }
 
+// get saving balance count
+function saveBalance(property) {
+    const balanceInput = document.getElementById(property);
+    // const balanceValue = balanceInput.innerText;
+    const reminingAmount = document.getElementById('remaining-amount');
+    const totalBalanceInput = document.getElementById('balance-total');
+    const totalBalance = parseFloat(totalBalanceInput.innerText);
+    const getSaveValue = getInput('save');
+
+    const savingCalculation = (parseFloat(getSaveValue) * totalBalance) / 100;
+    balanceInput.innerText = savingCalculation;
+
+    reminingAmount.innerText = totalBalance - savingCalculation;
+}
+
+// calculate button 
 const calculateButton = document.getElementById('calculate-button');
 calculateButton.addEventListener('click', function() {
 
+    // const foodCostValue = getInput('food');
+    // const foodCost = parseFloat(foodCostValue)
+    // const rentCostValue = getInput('rent');
+    // const rentCost = parseFloat(rentCostValue);
+    // const clothesCostValue = getInput('clothes');
+    // const clothesCost = parseFloat(clothesCostValue);
     updateTotalBalance('balance');
     expensesBalance('expenses');
+
 });
+
+//save button 
+const saveButton = document.getElementById('save-button');
+saveButton.addEventListener('click', function() {
+    saveBalance('saving-amount');
+})
