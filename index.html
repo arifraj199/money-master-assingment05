@@ -17,17 +17,49 @@
 
     <!-- header section -->
     <header>
-        <h1 class="text-center mt-5">Money <span class="text-primary">Hub</span></h1>
+        <h1 class="text-center mt-5">Money <span class="text-primary">HUB</span></h1>
     </header>
     <!-- main section -->
     <main>
-        <section>
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <img class="img-fluid mx-4 my-5" src="images/money-hub.jpg" alt="">
+        <section class="container">
+            <div class="row my-5 gy-3 gx-lg-4">
+                <div class="col-12 col-md-7">
+                    <img class="img-fluid h-100" src="images/money-hub.jpg" alt="">
                 </div>
-                <div class="col-12 col-md-6"></div>
+                <div class="col-12 col-md-5 text-center ">
+                    <div class="bg-balance-info px-2 py-5">
+                        <!-- total income -->
+                        <div>
+                            <h4 class="mb-3">Income</h4>
+                            <span class="fw-bold">Income: </span><input class="w-50 border-0 py-2 input-bg rounded" type="text" value="">
+                        </div>
+                        <!-- expenses -->
+                        <div>
+                            <h4 class="mt-4 mb-3">Expenses</h4>
+                            <span class="fw-bold">Food: </span><input class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value="">
+                            <br><span class="fw-bold">Rent: </span><input class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value="">
+                            <br><span class="fw-bold">Clothes: </span><input class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value=""><br>
+                        </div>
+                        <!-- calculate button -->
+                        <div class="mb-5 mt-3">
+                            <button class="bg-primary bg-opacity-75 text-white border-0 fs-5 px-5 py-2 rounded-3 ">Calculate</button>
+                        </div>
+                        <!-- total balance count -->
+                        <div>
+                            <h4 class="my-4">Total Expenses:<span>0</span></h4>
+                            <h4 class="my-4">balance:<span>0</span></h4>
+                        </div>
+                        <!-- saving balance -->
+                        <div>
+                            <span class="fw-bold">Save: </span><input class="w-25 border-0 py-2 input-bg mx-2 rounded" type="text" value=""> % <button class="bg-primary bg-opacity-75 text-white border-0 fs-5 px-4 py-1 my-2 mx-2 rounded-3 ">Save</button>
+                            <h4 class="my-4">Saving Amount:<span>0</span></h4>
+                            <h4>Remaining Balance:<span>0</span></h4>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
         </section>
     </main>
 
