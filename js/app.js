@@ -31,7 +31,6 @@ function updateTotalBalance(property) {
 // get saving balance count
 function saveBalance(property) {
     const balanceInput = document.getElementById(property);
-    // const balanceValue = balanceInput.innerText;
     const reminingAmount = document.getElementById('remaining-amount');
     const totalBalanceInput = document.getElementById('balance-total');
     const totalBalance = parseFloat(totalBalanceInput.innerText);
@@ -53,6 +52,7 @@ calculateButton.addEventListener('click', function() {
     // const rentCost = parseFloat(rentCostValue);
     // const clothesCostValue = getInput('clothes');
     // const clothesCost = parseFloat(clothesCostValue);
+
     updateTotalBalance('balance');
     expensesBalance('expenses');
 
@@ -61,5 +61,17 @@ calculateButton.addEventListener('click', function() {
 //save button 
 const saveButton = document.getElementById('save-button');
 saveButton.addEventListener('click', function() {
+    // const balanceTotal = document.getElementById('balance-total').innerText;
+    // const balance = parseInt(balanceTotal);
+    // const savingBalance = document.getElementById('saving-amount').innerText;
+    // const saving = parseInt(savingBalance);
     saveBalance('saving-amount');
+
+    // if (saving < balance) {
+
+    // } else if (saving > balance) {
+    //     alert('out of total balance.please save less than total balance');
+    // }
+
+
 })
