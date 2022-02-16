@@ -3,10 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* for font weight 700 */
+
 h1,
 h2 {
     font-family: 'Poppins', sans-serif;
 }
+
+
+/* for font weight 500 */
 
 h3,
 h4 {
