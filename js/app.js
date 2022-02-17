@@ -23,10 +23,7 @@ function balanceTotal() {
     const inputValue = getInput('income');
     balanceInput.innerText = inputValue;
 }
-// adding total balance
-function addTotal(total, expenses) {
-    return total - expenses;
-}
+
 // get balance count 
 function updateTotalBalance(property) {
     const balanceInput = document.getElementById(property + '-total');
@@ -60,18 +57,19 @@ calculateButton.addEventListener('click', function() {
     const foodCost = getInput('food');
     const rentCost = getInput('rent');
     const clothesCost = getInput('clothes');
+    const incomeValue = getInput('income');
 
     // error message for calculate cost
-    if (foodCost > 0 && rentCost > 0 && clothesCost > 0) {
+    if (foodCost > 0 && rentCost > 0 && clothesCost > 0 && incomeValue > 0) {
         balanceTotal();
         expensesBalance();
         updateTotalBalance('balance');
         errorMessage.innerText = '';
-    } else if (foodCost < 0 || rentCost < 0 || clothesCost < 0) {
-        errorMessage.innerText = 'please enter positive number';
+    } else if (foodCost < 0 || rentCost < 0 || clothesCost < 0 || incomeValue < 0) {
+        errorMessage.innerText = 'please enter positive integer number';
         document.getElementById('expenses-total').innerText = 0;
     } else {
-        errorMessage.innerText = 'please input integer number';
+        errorMessage.innerText = 'please input valid number';
         document.getElementById('expenses-total').innerText = 0;
     }
 });
