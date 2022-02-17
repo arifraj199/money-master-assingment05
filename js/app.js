@@ -68,18 +68,32 @@ calculateButton.addEventListener('click', function() {
         updateTotalBalance('balance');
         errorMessage.innerText = '';
     } else if (foodCost < 0 || rentCost < 0 || clothesCost < 0 || incomeValue < 0) {
-        errorMessage.innerText = 'please enter positive integer number';
-        document.getElementById('expenses-total').innerText = 0;
-        balance.innerText = 0;
+        if (incomeValue > 0) {
+            errorMessage.innerText = 'please enter positive integer number';
+            document.getElementById('expenses-total').innerText = 0;
+            balance.innerText = incomeValue;
+        } else {
+            errorMessage.innerText = 'please enter positive integer number';
+            document.getElementById('expenses-total').innerText = 0;
+            balance.innerText = 0;
+        }
+
 
     } else if (totalExpenses > incomeValue) {
         errorMessage.innerText = 'expenses balance is more than income balance';
         document.getElementById('expenses-total').innerText = 0;
         balance.innerText = incomeValue;
     } else {
-        errorMessage.innerText = 'please input valid number';
-        document.getElementById('expenses-total').innerText = 0;
-        balance.innerText = 0;
+        if (isNaN(incomeValue)) {
+            errorMessage.innerText = 'please input valid number';
+            document.getElementById('expenses-total').innerText = 0;
+            balance.innerText = 0;
+        } else {
+            errorMessage.innerText = 'please input valid number';
+            document.getElementById('expenses-total').innerText = 0;
+            balance.innerText = incomeValue;
+        }
+
     }
 });
 
