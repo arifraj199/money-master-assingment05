@@ -70,7 +70,8 @@ calculateButton.addEventListener('click', function() {
     } else if (foodCost < 0 || rentCost < 0 || clothesCost < 0 || incomeValue < 0) {
         errorMessage.innerText = 'please enter positive integer number';
         document.getElementById('expenses-total').innerText = 0;
-        balance.innerText = incomeValue;
+        balance.innerText = 0;
+
     } else if (totalExpenses > incomeValue) {
         errorMessage.innerText = 'expenses balance is more than income balance';
         document.getElementById('expenses-total').innerText = 0;
@@ -78,7 +79,7 @@ calculateButton.addEventListener('click', function() {
     } else {
         errorMessage.innerText = 'please input valid number';
         document.getElementById('expenses-total').innerText = 0;
-        balance.innerText = incomeValue;
+        balance.innerText = 0;
     }
 });
 
