@@ -62,7 +62,7 @@ calculateButton.addEventListener('click', function() {
     const totalExpenses = addExpenses(foodCost, rentCost, clothesCost);
 
     // error message for calculate cost
-    if (foodCost > 0 && rentCost > 0 && clothesCost > 0 && incomeValue > 0 && totalExpenses <= incomeValue) {
+    if (foodCost >= 0 && rentCost >= 0 && clothesCost >= 0 && incomeValue > 0 && totalExpenses <= incomeValue) {
         balanceTotal();
         expensesBalance();
         updateTotalBalance('balance');
