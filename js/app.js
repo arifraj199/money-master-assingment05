@@ -61,7 +61,6 @@ calculateButton.addEventListener('click', function() {
     const incomeValue = getInput('income');
     const totalExpenses = addExpenses(foodCost, rentCost, clothesCost);
 
-
     // error message for calculate cost
     if (foodCost > 0 && rentCost > 0 && clothesCost > 0 && incomeValue > 0 && totalExpenses <= incomeValue) {
         balanceTotal();
@@ -89,7 +88,6 @@ saveButton.addEventListener('click', function() {
     const errorThrow = document.getElementById('error-throw');
     const remainingBalance = document.getElementById('remaining-amount');
     const savingAmount = document.getElementById('saving-amount');
-
     const getIncomeValue = getInput('income');
     const totalBalanceInput = document.getElementById('balance-total');
     const totalBalance = parseFloat(totalBalanceInput.innerText);
