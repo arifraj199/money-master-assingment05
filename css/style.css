@@ -23,6 +23,11 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
+span {
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .bg-balance-info {
     background-color: #eeeeee;
 }

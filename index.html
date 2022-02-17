@@ -25,40 +25,40 @@
         <section class="container">
             <div class="row my-5 gy-3 gx-lg-4">
                 <!-- image -->
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-md-8">
                     <img class="img-fluid h-100" src="images/money2.jpg" alt="">
                 </div>
                 <!-- account -->
-                <div class="col-12 col-md-5 text-center ">
-                    <div class="bg-balance-info px-2 py-5">
+                <div class="col-12 col-md-4 text-center ">
+                    <div class="bg-balance-info px-2 py-3">
                         <!-- total income -->
                         <div>
-                            <h4 class="mb-3">Income</h4>
-                            <span class="fw-bold">Income: </span><input id="income-cost" class="w-50 border-0 py-2 input-bg rounded" type="text" value="">
+                            <h5 class="mb-2 mt-4 fw-bold">Income</h5>
+                            <span>Income: </span><input id="income-cost" class="w-50 border-0 py-2 input-bg rounded" type="text" value="">
                         </div>
                         <!-- expenses -->
                         <div>
-                            <h4 class="mt-4 mb-3">Expenses</h4>
-                            <span class="fw-bold">Food: </span><input id="food-cost" class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value="">
-                            <br><span class="fw-bold">Rent: </span><input id="rent-cost" class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value="">
-                            <br><span class="fw-bold">Clothes: </span><input id="clothes-cost" class="w-50 my-2 py-2 input-bg border-0 rounded" type="text" value=""><br>
+                            <h5 class="mt-3 mb-2 fw-bold">Expenses</h5>
+                            <span>Food: </span><input id="food-cost" class="w-50 my-1 py-2 input-bg border-0 rounded" type="text" value="">
+                            <br><span>Rent: </span><input id="rent-cost" class="w-50 my-1 py-2 input-bg border-0 rounded" type="text" value="">
+                            <br><span>Clothes: </span><input id="clothes-cost" class="w-50 my-1 py-2 input-bg border-0 rounded" type="text" value=""><br>
                         </div>
                         <!-- calculate button -->
                         <div class="mb-3 mt-3">
-                            <button id="calculate-button" class="bg-primary bg-opacity-75 text-white border-0 fs-5 px-5 py-2 rounded-3 ">Calculate</button>
+                            <button id="calculate-button" class="bg-primary bg-opacity-75 text-white border-0 fs-5 px-5 py-2 rounded-3">Calculate</button>
                         </div>
                         <div id="error-message" class="text-danger fs-5"></div>
                         <!-- total balance count -->
                         <div>
-                            <h4 class="my-4">Total Expenses:<span id="expenses-total">0</span></h4>
-                            <h4 class="my-4">Balance:<span id="balance-total">0</span></h4>
+                            <h5 class="my-2 fw-bold">Total Expenses:<span id="expenses-total">0</span></h5>
+                            <h5 class="my-2 fw-bold">Balance:<span id="balance-total">0</span></h5>
                         </div>
                         <!-- saving balance -->
                         <div>
-                            <span class="fw-bold">Save: </span><input id="save-cost" class="w-25 border-0 py-2 input-bg mx-2 rounded" type="text" value=""> % <button id="save-button" class="bg-primary bg-opacity-75 text-white border-0 fs-5 px-4 py-1 my-2 mx-2 rounded-3 ">Save</button>
+                            <span>Save: </span><input id="save-cost" class="w-25 border-0 py-2 input-bg mx-2 rounded" type="text" value=""> % <button id="save-button" class="bg-primary bg-opacity-75 text-white border-0 fs-5 px-4 py-1 my-2 mx-2 rounded-3 ">Save</button>
                             <div id="error-throw" class="text-danger fs-5"></div>
-                            <h4 class="my-3">Saving Amount:<span id="saving-amount">0</span></h4>
-                            <h4>Remaining Balance:<span id="remaining-amount">0</span></h4>
+                            <h5 class="my-2 fw-bold">Saving Amount:<span id="saving-amount">0</span></h5>
+                            <h5 class="fw-bold">Remaining Balance:<span id="remaining-amount">0</span></h5>
                         </div>
                     </div>
 

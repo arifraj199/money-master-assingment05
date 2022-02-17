@@ -54,13 +54,16 @@ function saveBalance(property) {
 const calculateButton = document.getElementById('calculate-button');
 calculateButton.addEventListener('click', function() {
     const errorMessage = document.getElementById('error-message');
+    const balance = document.getElementById('balance-total');
     const foodCost = getInput('food');
     const rentCost = getInput('rent');
     const clothesCost = getInput('clothes');
     const incomeValue = getInput('income');
+    const totalExpenses = addExpenses(foodCost, rentCost, clothesCost);
+
 
     // error message for calculate cost
-    if (foodCost > 0 && rentCost > 0 && clothesCost > 0 && incomeValue > 0) {
+    if (foodCost > 0 && rentCost > 0 && clothesCost > 0 && incomeValue > 0 && totalExpenses <= incomeValue) {
         balanceTotal();
         expensesBalance();
         updateTotalBalance('balance');
@@ -68,9 +71,15 @@ calculateButton.addEventListener('click', function() {
     } else if (foodCost < 0 || rentCost < 0 || clothesCost < 0 || incomeValue < 0) {
         errorMessage.innerText = 'please enter positive integer number';
         document.getElementById('expenses-total').innerText = 0;
+        balance.innerText = incomeValue;
+    } else if (totalExpenses > incomeValue) {
+        errorMessage.innerText = 'expenses balance is more than income balance';
+        document.getElementById('expenses-total').innerText = 0;
+        balance.innerText = incomeValue;
     } else {
         errorMessage.innerText = 'please input valid number';
         document.getElementById('expenses-total').innerText = 0;
+        balance.innerText = incomeValue;
     }
 });
 
